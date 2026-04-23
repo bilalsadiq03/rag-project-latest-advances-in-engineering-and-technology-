@@ -1,3 +1,8 @@
 .env
-venv
+venv/
 uploads/
+
+
+__pycache__/
+faiss_index/
+*.pyc
