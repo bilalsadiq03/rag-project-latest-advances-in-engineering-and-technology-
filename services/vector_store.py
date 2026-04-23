@@ -18,4 +18,8 @@ def load_vector_store(path="faiss_index"):
     embeddings = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2"
     )
-    return FAISS.load_local(path, embeddings)
+    return FAISS.load_local(
+    path,
+    embeddings,
+    allow_dangerous_deserialization=True
+)
